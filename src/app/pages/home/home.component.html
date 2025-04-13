@@ -1,6 +1,7 @@
 <app-header></app-header>
 <body [ngStyle]="">
 	<div class="container">
+		<br><br>
 		<h1>Elektronic Elek Szakszervíz</h1>
 		<p>Üdvözöljük a weboldalunkon!</p>
 
@@ -9,20 +10,21 @@
 				<legend>Időpontfoglalás regisztráció nélkül</legend>
 				<div>
 					<label for="name">Név:</label><br>
-					<input id="name" type="text" formControlName="name" required />
+					<input id="name" type="text" formControlName="name" appFieldHighlight required />
 				</div>
 				<div>
 					<label for="email">Email:</label><br>
-					<input id="email" type="email" formControlName="email" required />
+					<input id="email" type="email" formControlName="email" appFieldHighlight required />
 				</div>
+				<div></div>
 				<label for="device">Eszköz:</label><br>
-				<select  name ="device" id="device" formControlName="device" required>
+				<select  name ="device" id="device" formControlName="device" appFieldHighlight required>
 					<option value="" disabled>Kérem válasszon eszközt!</option>
 					<option value="phone">Telefon</option>
 					<option value="laptop">Laptop</option>
 				</select>
-				<label for="problem">Mi a probléma?</label>
-				<select name="problem" id="problem" formControlName="problem" required>
+				<label for="deviceProblem">Mi a probléma?</label>
+				<select name="deviceProblem" id="deviceProblem" formControlName="deviceProblem" appFieldHighlight required>
 					<option value="" disabled>Kérem válassza ki a problémáját!</option>
 					<option value="screen">Kijelző</option>
 					<option value="battery">Akkumulátor</option>
@@ -31,7 +33,7 @@
 				</select>
 				<div>
 					<label for="description">Kérem részletezze a problémát:</label><br>
-					<textarea id="description" rows="7" cols="80" required></textarea>
+					<textarea id="description" rows="7" cols="80" appFieldHighlight required></textarea>
 				</div>
 				<input type="submit" value="Küldés" />
 			</fieldset>

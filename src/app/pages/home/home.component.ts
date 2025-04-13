@@ -3,11 +3,12 @@ import { HeaderComponent } from '../header/header.component';
 import {Component} from "@angular/core";
 import {NgStyle} from "@angular/common";
 import {FormBuilder, FormGroup, ReactiveFormsModule} from "@angular/forms";
+import {FieldHighlightDirective} from "../../directives/field-highlight.directive";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HeaderComponent, NgStyle, ReactiveFormsModule],
+  imports: [HeaderComponent, NgStyle, ReactiveFormsModule, FieldHighlightDirective],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })

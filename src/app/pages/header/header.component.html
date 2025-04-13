@@ -1,11 +1,8 @@
 <header>
-	<h1></h1>
 	<nav>
-		<ul>
-			<li><a routerLink="/home">Home</a></li>
-			<li><a routerLink="/contacts">Contact</a></li>
-			<li><a routerLink="/login" >Log in</a></li>
-			<li><a routerLink="/register">Sign up</a></li>
-		</ul>
+		<a routerLink="/home" appHoverBackground hoverColor="#afafaf">{{ 'home' | uppercase}}</a>
+		<a routerLink="/contacts" appHoverBackground hoverColor="#afafaf">{{ 'contact us' | uppercase}}</a>
+		<a routerLink="/login" appHoverBackground hoverColor="#afafaf">{{ 'log in' | uppercase}}</a>
+		<a routerLink="/register" appHoverBackground hoverColor="#afafaf">{{ 'sign up' | uppercase}}</a>
 	</nav>
 </header>
