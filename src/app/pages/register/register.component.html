@@ -1,0 +1,20 @@
+<app-header></app-header>
+<form [formGroup]="registerForm">
+	<div>
+		<label for="username">Username:</label><br>
+		<input id="username" formControlName="username" required/>
+	</div>
+
+	<div>
+		<label for="email">Email:</label><br>
+		<input id="email" type="email" formControlName="email" required/>
+	</div>
+
+	<div>
+		<label for="password">Password:</label>
+		<br>
+		<input id="password" type="password" formControlName="password" required/>
+	</div>
+
+	<button type="submit">Register</button>
+</form>
