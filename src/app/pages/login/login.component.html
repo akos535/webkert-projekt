@@ -1,12 +1,15 @@
 <app-header></app-header>
 <form [formGroup]="loginForm">
-	<div>
-		<label for="email">Email:</label>
-		<input id="email" type="email" formControlName="email" required/>
-	</div>
-	<div>
-		<label for="password">Password:</label>
-		<input id="password" type="password" formControlName="password" required/>
-	</div>
-	<button type="submit" [disabled]="loginForm.invalid">Login</button>
+	<fieldset>
+		<legend>Login</legend>
+		<div>
+			<label for="email">Email:</label>
+			<input id="email" type="email" formControlName="email" required/>
+		</div>
+		<div>
+			<label for="password">Password:</label>
+			<input id="password" type="password" formControlName="password" required/>
+		</div>
+		<input type="submit" value="Log in" [disabled]="loginForm.invalid"/>
+	</fieldset>
 </form>
