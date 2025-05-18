@@ -1,8 +1,16 @@
 <header>
 	<nav>
-		<a routerLink="/home" appHoverBackground hoverColor="#afafaf">{{ 'home' | uppercase}}</a>
-		<a routerLink="/contacts" appHoverBackground hoverColor="#afafaf">{{ 'contact us' | uppercase}}</a>
-		<a routerLink="/login" appHoverBackground hoverColor="#afafaf">{{ 'log in' | uppercase}}</a>
-		<a routerLink="/register" appHoverBackground hoverColor="#afafaf">{{ 'sign up' | uppercase}}</a>
+		<a routerLink="/home" appHoverBackground hoverColor="#afafaf">{{ 'home' | uppercase }}</a>
+		<a routerLink="/contacts" appHoverBackground hoverColor="#afafaf">{{ 'contact us' | uppercase }}</a>
+		<ng-container *ngIf="isLoggedIn$ | async; else guestLinks">
+			<div (click)="logout()" style="cursor: pointer;">
+				<span>{{ userEmail$ | async }}</span><br>
+				<span>Log Out</span>
+			</div>
+		</ng-container>
+		<ng-template #guestLinks>
+			<a routerLink="/login" appHoverBackground hoverColor="#afafaf">{{ 'log in' | uppercase }}</a>
+			<a routerLink="/register" appHoverBackground hoverColor="#afafaf">{{ 'sign up' | uppercase }}</a>
+		</ng-template>
 	</nav>
 </header>
